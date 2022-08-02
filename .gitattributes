@@ -1,0 +1,15 @@
+*                                      text=auto
+*.yaml                                 text
+*.[jt]s                                text
+*.[mc]js                               text
+*.yml                                  text
+*.json                                 text
+*.gitignore                            text
+*.gitattributes                        text
+
+# Older git versions try to fix line endings on images and fonts, this prevents it.
+*.png                                  binary
+*.jpg                                  binary
+*.ico                                  binary
+*.woff                                 binary
+*.woff2                                binary

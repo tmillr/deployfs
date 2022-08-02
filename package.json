@@ -1,65 +1,57 @@
 {
-  "name": "deployfs",
-  "version": "0.0.1",
-  "description": "Deploy/mount a local filesystem/directory onto a remote host.",
-  "main": "index.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tmillr/deployfs.git"
-  },
-  "keywords": [
-    "ssh",
-    "utility",
-    "command",
-    "filesystem",
-    "directory",
-    "fs",
-    "deploy",
-    "share",
-    "shell",
-    "shell-script",
-    "sshfs",
-    "fuse-filesystem",
-    "sshfs-mounting",
-    "fuse",
-    "mount",
-    "hd",
-    "drive",
-    "unix"
-  ],
-  "author": {
-    "name": "Tyler Miller",
-    "url": "https://github.com/tmillr"
-  },
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/tmillr/deployfs/issues"
-  },
-  "homepage": "https://github.com/tmillr/deployfs#readme",
-  "directories": {
-    "bin": "./bin"
-  },
-  "deployfs": {
-    "usage": "deployfs localsharedpath [user@]host:mountpoint [-m | --mkmnt | --mkdir]",
-    "envVars": {
-      "SFTP_CMD": {
-        "desc": "sftp command line to invoke locally",
-        "default": "/usr/libexec/sftp-server"
-      },
-      "SSH_CMD": {
-        "desc": "ssh command line to invoke locally",
-        "default": "ssh"
-      },
-      "SSHFS_CMD": {
-        "desc": "command line to invoke remotely",
-        "default": "sshfs"
-      }
+    "name": "deployfs",
+    "version": "0.0.1",
+    "description": "Deploy/mount a local filesystem/directory onto a remote host.",
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/tmillr/deployfs#readme",
+    "author": {
+        "name": "Tyler Miller",
+        "url": "https://github.com/tmillr"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tmillr/deployfs.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tmillr/deployfs/issues"
+    },
+    "keywords": [
+        "ssh",
+        "utility",
+        "command",
+        "filesystem",
+        "directory",
+        "fs",
+        "deploy",
+        "share",
+        "shell",
+        "shell-script",
+        "sshfs",
+        "fuse-filesystem",
+        "sshfs-mounting",
+        "fuse",
+        "mount",
+        "hd",
+        "drive",
+        "unix"
+    ],
+    "main": "index.mjs",
+    "type": "module",
+    "bin": {
+        "deployfs": "./bin/deployfs.mjs"
+    },
+    "directories": {
+        "bin": "./bin"
+    },
+    "scripts": {
+        "deployfs": "./bin/deployfs.mjs",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-readme": "./scripts/build-readme.mjs"
+    },
+    "dependencies": {
+        "execa": "^6.1.0"
+    },
+    "devDependencies": {
+        "get-bin-path": "^7.0.0"
     }
-  },
-  "dependencies": {
-    "execa": "^6.1.0"
-  }
 }

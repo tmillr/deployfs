@@ -2,6 +2,6 @@
 insert_final_newline = true
 trim_trailing_whitespace = false
 
-[*.{js,cjs,mjs,ts,jsx,tsx}]
+[*.{js,cjs,mjs,ts,jsx,tsx,json}]
 indent_style = space
 indent_size = 4
