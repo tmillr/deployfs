@@ -1,6 +1,6 @@
 # deployfs
 
-![npm](https://img.shields.io/npm/v/deployfs?color=red)
+[![npm](https://img.shields.io/npm/v/deployfs?color=red)](https://www.npmjs.com/package/deployfs)
 
 Deploy/mount a local filesystem/directory onto a remote host.
 
