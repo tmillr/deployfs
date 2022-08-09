@@ -1,5 +1,7 @@
 # deployfs
 
+![npm](https://img.shields.io/npm/v/deployfs?color=red)
+
 Deploy/mount a local filesystem/directory onto a remote host.
 
 deployfs is a utility/command which wraps the [sshfs command][sshfs]. sshfs is a simple command used for mounting a remote filesystem on the local host by utilizing sftp (ftp over ssh). deployfs is a command that wraps sshfs and allows you to do the inverse (i.e. mount a local filesystem on a remote host) without ever having to setup or allow ssh logins on the local host whose filesystem/directory is to be mounted. An ssh login from this local host to the remote host who is to receive the share is required however.
