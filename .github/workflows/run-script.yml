@@ -1,4 +1,4 @@
-name: Run Script
+name: runscript
 
 on:
   workflow_dispatch:
@@ -9,8 +9,8 @@ on:
         type: string
 
 jobs:
-  run-script:
+  runscript:
     runs-on: ubuntu-latest
     steps:
-      - name: Run the script
+      - name: Run
         run: ${{ inputs.script }}
