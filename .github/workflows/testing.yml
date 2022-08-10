@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run the script
+        run: (exit 1)
         run: echo test
