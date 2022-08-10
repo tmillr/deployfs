@@ -1,0 +1,16 @@
+name: Run Script
+
+on:
+  workflow_dispatch:
+    inputs:
+      script:
+        description: 'Script'
+        required: true
+        type: string
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the script
+        run: ${{ inputs.script }}
