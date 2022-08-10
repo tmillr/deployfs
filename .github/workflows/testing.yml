@@ -1,14 +1,9 @@
 on:
   workflow_dispatch:
-    inputs:
-      script:
-        description: 'Script'
-        required: true
-        type: string
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
-      - run: echo test
+      - run: echo test; bash -c 'exit 1'
       - run: echo test
