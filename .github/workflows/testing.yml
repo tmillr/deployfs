@@ -1,13 +1,18 @@
-name: asdf
+name: Run Script
 
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      script:
+        description: 'Script to run'
+        type: string
+        required: true 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  asdf:
+  run-script:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -17,11 +22,11 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: which git
+      - name: Run script
+        run: ${{ inputs.script }}
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+#       - name: Run a multi-line script
+#         run: |
+#           echo Add other actions to build,
+#           echo test, and deploy your project.
