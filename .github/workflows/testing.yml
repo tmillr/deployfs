@@ -10,5 +10,5 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
-      - run: bash -c 'exit 1'; echo test
+      - run: echo test
       - run: echo test
