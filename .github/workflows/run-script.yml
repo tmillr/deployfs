@@ -1,4 +1,4 @@
-name: runscript
+name: test
 
 on:
   workflow_dispatch:
@@ -9,8 +9,10 @@ on:
         type: string
 
 jobs:
-  runscript:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Run
-        run: ${{ inputs.script }}
+      - uses: actions/checkout@v3
+        with:
+          ref: my-branch
+      - run: ${{ inputs.script }}
