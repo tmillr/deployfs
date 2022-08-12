@@ -12,5 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: ${{ inputs.script }}
+      - uses: actions/checkout@v3
+        with:
+          ref: my-branch
+      - run: ${{ inputs.script }}
